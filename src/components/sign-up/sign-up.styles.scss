@@ -1,0 +1,25 @@
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .group {
+    width: 50%;
+  }
+  .buttons {
+    width: 50%;
+    display: flex;
+
+    .custom-button {
+      width: 50%;
+      margin: 20px 0;
+      background-color: #04aa6d;
+      color: white;
+      border: none;
+
+      &.cancel-btn {
+        background-color: #f44336;
+      }
+    }
+  }
+}
