@@ -1,0 +1,16 @@
+.custom-button {
+  height: 50px;
+  letter-spacing: 0.5px;
+  font-size: 18px;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #000;
+  opacity: 0.85;
+
+  &:hover {
+    cursor: pointer;
+    background-color: #231f20;
+    color: white;
+    opacity: 1;
+  }
+}
