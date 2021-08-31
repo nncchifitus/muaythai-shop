@@ -19,22 +19,16 @@
       }
     }
 
-    .custom-button {
-      width: 50%;
-      margin: 20px;
-      background-color: #04aa6d;
-      color: white;
-      border: none;
+    .buttons {
+      margin-top: 24px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
 
-      .icon {
-        font-size: 24px;
-        padding-right: 5px;
-      }
-
-      &.google-btn {
-        border: none;
-        background-color: #dd4b39;
-        color: white;
+      .custom-button {
+        width: 50%;
+        margin: 12px 0;
       }
     }
   }

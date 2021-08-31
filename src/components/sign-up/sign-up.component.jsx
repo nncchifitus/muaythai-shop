@@ -78,8 +78,8 @@ class SignUp extends React.Component {
             required
           />
           <div className="buttons">
-            <CustomButton className="cancel-btn">Cancel</CustomButton>
-            <CustomButton>Sign up</CustomButton>
+            <CustomButton isCancelBtn>Cancel</CustomButton>
+            <CustomButton isNormalBtn>Sign up</CustomButton>
           </div>
         </form>
       </div>

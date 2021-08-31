@@ -1,25 +1,23 @@
-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  .group {
-    width: 50%;
-  }
-  .buttons {
-    width: 50%;
+.sign-up {
+  form {
     display: flex;
+    flex-direction: column;
+    align-items: center;
 
-    .custom-button {
+    .group {
       width: 50%;
-      margin: 20px 0;
-      background-color: #04aa6d;
-      color: white;
-      border: none;
+    }
 
-      &.cancel-btn {
-        background-color: #f44336;
+    .buttons {
+      margin-top: 24px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+
+      .custom-button {
+        width: 25%;
       }
     }
+
   }
 }

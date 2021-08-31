@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 import FormInput from "../form-input/form-input.component";
 import CustomButton from "../custom-button/custom-button.component";
 
+import { signInWithGoogle } from "../../firebase/firebase.utils";
+
 import "./sign-in.styles.scss";
 
 class SignIn extends React.Component {
@@ -50,11 +52,15 @@ class SignIn extends React.Component {
             label="Password"
             required
           />
-          <CustomButton type="submit">Sign in to your account</CustomButton>
-          OR
-          <CustomButton className="google-btn">
-            <i className="fa fa-google fa-fw"></i>Sign in with Google
-          </CustomButton>
+          <div className="buttons">
+            <CustomButton type="submit" isNormalBtn>
+              Sign in to your account
+            </CustomButton>
+            OR
+            <CustomButton onClick={signInWithGoogle} isGoogleSignIn>
+              <i className="fa fa-google fa-fw"></i>Sign in with Google
+            </CustomButton>
+          </div>
           <Link to="/account/signup">Sign up</Link>
         </form>
       </div>
