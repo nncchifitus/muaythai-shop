@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { connect } from "react-redux";
 
 import { auth } from "../../firebase/firebase.utils";
-// import ShopDropDown from "../shop-dropdown/shop-dropdown.component";
 
 import "./navigation.styles.scss";
 
@@ -36,4 +36,9 @@ const Navigation = ({ currentUser }) => (
   </div>
 );
 
-export default Navigation;
+// state là rootReducer
+const mapStateToProps = (state) => ({
+  currentUser: state.user.currentUser,
+});
+
+export default connect(mapStateToProps)(Navigation);

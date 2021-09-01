@@ -49,7 +49,7 @@ class SignUp extends React.Component {
         confirmPassword: "",
       });
     } catch (error) {
-      console.error(error);
+      alert(error);
     }
   };
 
@@ -107,9 +107,9 @@ class SignUp extends React.Component {
             required
           />
           <div className="buttons">
-            {/* <CustomButton type="button" isCancelBtn>
+            <CustomButton type="button" isCancelBtn>
               Cancel
-            </CustomButton> */}
+            </CustomButton>
             <CustomButton type="submit" isNormalBtn>
               Sign up
             </CustomButton>
