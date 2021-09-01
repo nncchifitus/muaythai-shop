@@ -21,7 +21,9 @@ class SignIn extends React.Component {
     e.preventDefault();
 
     const { email, password } = this.state;
-    console.log(email, password);
+    // try {
+    //   await auth.signInWith
+    // }
     this.setState({ email: "", password: "" });
   };
 
@@ -31,15 +33,16 @@ class SignIn extends React.Component {
   };
 
   render() {
+    const { email, password } = this.state;
     return (
       <div className="sign-in">
         <h2 className="title">I already have an account</h2>
         <span>Sign in with your email and password</span>
-        <form onSubmit={this.handleSubmit}>
+        <form className="sign-in-form" onSubmit={this.handleSubmit}>
           <FormInput
             name="email"
             type="email"
-            value={this.state.email}
+            value={email}
             handleChange={this.handleChange}
             label="Email"
             required
@@ -47,7 +50,7 @@ class SignIn extends React.Component {
           <FormInput
             name="password"
             type="password"
-            value={this.state.password}
+            value={password}
             handleChange={this.handleChange}
             label="Password"
             required
@@ -57,7 +60,11 @@ class SignIn extends React.Component {
               Sign in to your account
             </CustomButton>
             OR
-            <CustomButton onClick={signInWithGoogle} isGoogleSignIn>
+            <CustomButton
+              type="button"
+              onClick={signInWithGoogle}
+              isGoogleSignIn
+            >
               <i className="fa fa-google fa-fw"></i>Sign in with Google
             </CustomButton>
           </div>
