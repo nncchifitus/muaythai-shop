@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 
 import { auth } from "../../firebase/firebase.utils";
+import AccountDropdown from "../account-dropdown/account-dropdown.component";
 
 import "./navigation.styles.scss";
 
@@ -39,6 +40,7 @@ const Navigation = ({ currentUser }) => (
 // state là rootReducer
 const mapStateToProps = (state) => ({
   currentUser: state.user.currentUser,
+  // hiddenAccountDropdown: state.account.hidden,
 });
 
 export default connect(mapStateToProps)(Navigation);

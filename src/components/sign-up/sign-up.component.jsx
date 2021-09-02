@@ -107,7 +107,13 @@ class SignUp extends React.Component {
             required
           />
           <div className="buttons">
-            <CustomButton type="button" isCancelBtn>
+            <CustomButton
+              type="button"
+              isCancelBtn
+              onClick={() => console.log(1)}
+              onMouseEnter={() => console.log(2)}
+              onMouseLeave={() => console.log(3)}
+            >
               Cancel
             </CustomButton>
             <CustomButton type="submit" isNormalBtn>
