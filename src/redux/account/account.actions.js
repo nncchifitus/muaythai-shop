@@ -1,7 +1,9 @@
-export const showAccountDropdown = {
-  type: "SHOW_ACCOUNT_DROPDOWN",
-};
+import { accountActionTypes } from "./account.types";
 
-export const hideAccountDropdown = {
-  type: "HIDE_ACCOUNT_DROPDOWN",
-};
+export const showAccountDropdown = () => ({
+  type: accountActionTypes.SHOW_ACCOUNT_DROPDOWN,
+});
+
+export const hideAccountDropdown = () => ({
+  type: accountActionTypes.HIDE_ACCOUNT_DROPDOWN,
+});

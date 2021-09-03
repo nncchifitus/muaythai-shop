@@ -1,4 +1,4 @@
-.account-dropdown {
+.cart-dropdown {
   width: 240px;
   height: 300px;
   background-color: #fff;
@@ -11,4 +11,15 @@
   z-index: 5;
   top: 80px;
   right: 200px;
+
+  .cart-items {
+    height: 80%;
+    width: 96%;
+    overflow-y: scroll;
+  }
+
+  .custom-button {
+    position: absolute;
+    top: 80%;
+  }
 }

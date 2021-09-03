@@ -3,11 +3,13 @@ import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 
 import { auth } from "../../firebase/firebase.utils";
-import AccountDropdown from "../account-dropdown/account-dropdown.component";
+import AccountIcon from "../account-icon/account-icon.component";
+import CartIcon from "../cart-icon/cart-icon.component";
+import CartDropdown from "../cart-dropdown/cart-dropdown.component";
 
 import "./navigation.styles.scss";
 
-const Navigation = ({ currentUser }) => (
+const Navigation = ({ currentUser, hiddenCart, hiddenAccount }) => (
   <div className="navigation">
     <Link className="logo-container" to="/">
       <div
@@ -33,14 +35,16 @@ const Navigation = ({ currentUser }) => (
           SIGN IN
         </Link>
       )}
+      <CartIcon />
     </div>
+    {hiddenCart ? null : <CartDropdown />}
   </div>
 );
 
 // state là rootReducer
 const mapStateToProps = (state) => ({
   currentUser: state.user.currentUser,
-  // hiddenAccountDropdown: state.account.hidden,
+  hiddenCart: state.cart.hidden,
 });
 
 export default connect(mapStateToProps)(Navigation);
