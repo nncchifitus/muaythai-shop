@@ -1,24 +1,29 @@
 .cart-dropdown {
+  position: absolute;
   width: 240px;
   height: 300px;
-  background-color: #fff;
-  position: absolute;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
+  padding: 5px;
+  background-color: #fff;
   border: 1px solid #000;
-  z-index: 5;
   top: 80px;
   right: 200px;
+  z-index: 5;
 
   .cart-items {
     height: 80%;
-    width: 96%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
     overflow-y: scroll;
 
+    .empty-message {
+      margin: auto;
+    }
+
     .cart-item {
-      margin: 5px 0;
+      margin-bottom: 5px;
 
       &:last-child {
         margin-bottom: 0;
@@ -27,8 +32,7 @@
   }
 
   .custom-button {
-    margin-top: 5px;
-    position: absolute;
-    top: 80%;
+    margin: auto;
+    margin-bottom: 0;
   }
 }

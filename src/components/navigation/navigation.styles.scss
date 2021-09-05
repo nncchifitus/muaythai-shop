@@ -21,7 +21,7 @@
     width: 50%;
     height: 100%;
     display: flex;
-    align-items: center;
+    align-items: baseline;
     justify-content: flex-end;
 
     .option {
@@ -38,7 +38,7 @@
       }
 
       &:last-child {
-        padding-right: 0;
+        padding-right: 30px;
       }
 
       // &:hover .shop-dropdown {

@@ -1,4 +1,5 @@
 import React from "react";
+import { withRouter } from "react-router-dom";
 
 import FormInput from "../form-input/form-input.component";
 import CustomButton from "../custom-button/custom-button.component";
@@ -59,6 +60,7 @@ class SignUp extends React.Component {
   };
 
   render() {
+    console.log(this.props);
     const { displayName, email, phoneNumber, password, confirmPassword } =
       this.state;
     return (
@@ -110,9 +112,7 @@ class SignUp extends React.Component {
             <CustomButton
               type="button"
               isCancelBtn
-              onClick={() => console.log(1)}
-              onMouseEnter={() => console.log(2)}
-              onMouseLeave={() => console.log(3)}
+              onClick={() => this.props.history.push("/")}
             >
               Cancel
             </CustomButton>
@@ -125,4 +125,4 @@ class SignUp extends React.Component {
     );
   }
 }
-export default SignUp;
+export default withRouter(SignUp);
