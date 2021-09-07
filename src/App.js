@@ -3,7 +3,7 @@ import { Route, Switch, Redirect } from "react-router-dom";
 import { connect } from "react-redux";
 import { createStructuredSelector } from "reselect";
 
-import Navigation from "./components/navigation/navigation.component";
+import Header from "./components/header/header.component";
 import ShopPage from "./pages/shop/shop.component";
 import SignInPage from "./pages/signin/signin.component";
 import SignUpPage from "./pages/signup/signup.component";
@@ -46,9 +46,9 @@ class App extends React.Component {
     const { currentUser } = this.props;
     return (
       <div className="App">
-        <Navigation />
+        <Header />
         <Switch>
-          <Route exact path="/shop" component={ShopPage} />
+          <Route path="/shop" component={ShopPage} />
           <Route
             exact
             path="/account/signin"
